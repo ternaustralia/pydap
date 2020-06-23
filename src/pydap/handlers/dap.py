@@ -55,7 +55,7 @@ class DAPHandler(BaseHandler):
         if not r.charset:
             r.charset = 'ascii'
         if r.charset == 'ascii':
-            r.charset = 'unf-8'
+            r.charset = 'utf-8'
         dds = r.text
 
         dasurl = urlunsplit((scheme, netloc, path + '.das', query, fragment))
@@ -64,7 +64,7 @@ class DAPHandler(BaseHandler):
         if not r.charset:
             r.charset = 'ascii'
         if r.charset == 'ascii':
-            r.charset = 'unf-8'
+            r.charset = 'utf-8'
         das = r.text
 
         # build the dataset from the DDS and add attributes from the DAS
